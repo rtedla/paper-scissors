@@ -33,6 +33,10 @@ function playRound(humanChoice, computerChoice) {
         return `You lose! ${computerChoice} beats ${humanChoice}`;
     }
 }
+// Test the function
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+console.log(playRound(humanSelection, computerSelection));
 
 function playGame() {
     humanScore = 0;
