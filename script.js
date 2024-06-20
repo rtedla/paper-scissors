@@ -48,6 +48,20 @@ console.log(getHumanChoice());
 let humanScore = 0;
 let computerScore = 0;
 
+function determineWinner(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        return "It's a tie!";
+    } else if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+    ) {
+        return "You win!";
+    } else {
+        return "You lose!";
+    }
+}
+
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
     if (humanChoice === computerChoice) {
