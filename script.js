@@ -37,3 +37,7 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+// Test the function
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+console.log(playRound(humanSelection, computerSelection));
