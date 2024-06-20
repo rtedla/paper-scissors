@@ -42,12 +42,15 @@ function playGame() {
     humanScore = 0;
     computerScore = 0;
 
-    for (let i = 0; i < 5; i++) {
+   for (let i = 0; i < 5; i++) {
         const humanSelection = getHumanChoice();
+        if (humanSelection === null) {
+            console.log("Game cancelled by user.");
+            return;
+        }
         const computerSelection = getComputerChoice();
         console.log(playRound(humanSelection, computerSelection));
     }
-
     if (humanScore > computerScore) {
         console.log(`You win the game! Final score: Human ${humanScore} - Computer ${computerScore}`);
     } else if (computerScore > humanScore) {
