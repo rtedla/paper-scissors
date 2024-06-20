@@ -1,15 +1,12 @@
 let humanScore = 0;
 let computerScore = 0;
 
-
-
-
+// Function to get the human choice
 function getHumanChoice() {
     let choice = prompt("Enter rock, paper, or scissors:");
-   let choice = prompt("Enter rock, paper, or scissors:");
     if (choice === null) {
-        return null;
-          }
+        return null; // User cancelled the prompt
+    }
     return choice.toLowerCase();
 }
 //test
@@ -46,7 +43,6 @@ function playRound(humanChoice, computerChoice) {
     updateScoreDisplay();
 }
 
-// Function to update the score
 function updateScore(result) {
     if (result === "You win!") {
         humanScore++;
@@ -54,10 +50,6 @@ function updateScore(result) {
         computerScore++;
     }
 }
-// Test the function
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-console.log(playRound(humanSelection, computerSelection));
 
 function updateScoreDisplay() {
     const scoreDiv = document.getElementById('score');
@@ -79,13 +71,12 @@ function updateScoreDisplay() {
         console.log(playRound(humanSelection, computerSelection));
     }
     */
-  function announceWinner(winner) {
+function announceWinner(winner) {
     const winnerDiv = document.getElementById('winner');
     winnerDiv.textContent = `${winner} wins the game!`;
 }
 
-
-document.getElementById('rock').addEventListener('click', function(){
+document.getElementById('rock').addEventListener('click', function() {
     if (humanScore < 5 && computerScore < 5) {
         playRound('rock', getComputerChoice());
     }
@@ -97,8 +88,7 @@ document.getElementById('paper').addEventListener('click', function() {
     }
 });
 
-
-document.getElementById('scissors').addEventListener('click', function(){
+document.getElementById('scissors').addEventListener('click', function() {
     if (humanScore < 5 && computerScore < 5) {
         playRound('scissors', getComputerChoice());
     }
