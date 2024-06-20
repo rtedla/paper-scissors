@@ -104,16 +104,11 @@ function updateScoreDisplay() {
         console.log(playRound(humanSelection, computerSelection));
     }
     */
-    if (humanScore > computerScore) {
-        console.log(`You win the game! Final score: Human ${humanScore} - Computer ${computerScore}`);
-    } else if (computerScore > humanScore) {
-        console.log(`You lose the game! Final score: Human ${humanScore} - Computer ${computerScore}`);
-    } else {
-        console.log(`The game is a tie! Final score: Human ${humanScore} - Computer ${computerScore}`);
-    }
+  function announceWinner(winner) {
+    const winnerDiv = document.getElementById('winner');
+    winnerDiv.textContent = `${winner} wins the game!`;
 }
 
-playGame();
 
 document.getElementById('rock').addEventListener('click', function() {
     playRound('rock', getComputerChoice());
