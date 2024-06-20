@@ -1,6 +1,3 @@
-The issue causing the error is that the `choice` variable is declared multiple times in the same scope. To fix this, let's remove the duplicate declaration of `choice` variable from the testing part of your code. Here's the corrected version:
-
-```javascript
 let humanScore = 0;
 let computerScore = 0;
 
@@ -89,6 +86,3 @@ document.getElementById('scissors').addEventListener('click', function() {
         playRound('scissors', getComputerChoice());
     }
 });
-```
-
-I've removed the commented-out code block containing the loop that was causing the issue. Now, the code should work correctly without any syntax errors.
