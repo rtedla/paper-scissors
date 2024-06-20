@@ -18,3 +18,14 @@ function getHumanChoice() {
 
 // Test the function
 console.log(getHumanChoice());
+
+
+function playRound(humanChoice, computerChoice) {
+    humanchoice = humanChoice.toLowerCase();
+    if (humanChoice === compuerChoice) {
+        return "It's a tie!";
+    } else if (
+        (humanChoice === "soccors" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+   
