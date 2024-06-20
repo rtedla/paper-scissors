@@ -84,10 +84,16 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 console.log(playRound(humanSelection, computerSelection));
 
-function playGame() {
-    humanScore = 0;
-    computerScore = 0;
+function updateScoreDisplay() {
+    const scoreDiv = document.getElementById('score');
+    scoreDiv.textContent = `Human: ${humanScore} - Computer: ${computerScore}`;
 
+    if (humanScore === 5) {
+        announceWinner("You");
+    } else if (computerScore === 5) {
+        announceWinner("Computer");
+    }
+}
  /*  for (let i = 0; i < 5; i++) {
         const humanSelection = getHumanChoice();
         if (humanSelection === null) {
