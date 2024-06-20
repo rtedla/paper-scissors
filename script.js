@@ -3,6 +3,8 @@ function getComputerChoice() {
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
+// Test the function
+console.log(getComputerChoice());
 
 function getHumanChoice() {
     let choice = prompt("Enter rock, paper, or scissors:");
