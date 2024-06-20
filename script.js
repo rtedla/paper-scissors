@@ -110,14 +110,21 @@ function updateScoreDisplay() {
 }
 
 
-document.getElementById('rock').addEventListener('click', function() {
-    playRound('rock', getComputerChoice());
+document.getElementById('rock').addEventListener('click', function(){
+    if (humanScore < 5 && computerScore < 5) {
+        playRound('rock', getComputerChoice());
+    }
 });
 
 document.getElementById('paper').addEventListener('click', function() {
-    playRound('paper', getComputerChoice());
+    if (humanScore < 5 && computerScore < 5) {
+        playRound('paper', getComputerChoice());
+    }
 });
 
-document.getElementById('scissors').addEventListener('click', function() {
-    playRound('scissors', getComputerChoice());
+
+document.getElementById('scissors').addEventListener('click', function(){
+    if (humanScore < 5 && computerScore < 5) {
+        playRound('scissors', getComputerChoice());
+    }
 });
