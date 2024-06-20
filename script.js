@@ -93,3 +93,7 @@ function playGame() {
 }
 
 playGame();
+
+document.getElementById('rock').addEventListener('click', function() {
+    playRound('rock', getComputerChoice());
+});
