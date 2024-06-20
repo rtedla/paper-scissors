@@ -101,3 +101,7 @@ document.getElementById('rock').addEventListener('click', function() {
 document.getElementById('paper').addEventListener('click', function() {
     playRound('paper', getComputerChoice());
 });
+
+document.getElementById('scissors').addEventListener('click', function() {
+    playRound('scissors', getComputerChoice());
+});
