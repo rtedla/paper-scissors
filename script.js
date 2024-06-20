@@ -1,4 +1,19 @@
+let humanScore = 0;
+let computerScore = 0;
 
+
+
+
+function getHumanChoice() {
+    let choice = prompt("Enter rock, paper, or scissors:");
+   let choice = prompt("Enter rock, paper, or scissors:");
+    if (choice === null) {
+        return null;
+          }
+    return choice.toLowerCase();
+}
+//test
+console.log(getHumanChoice());
 
 function getComputerChoice() {
     const choices = ["rock", "paper", "scissors"];
@@ -7,17 +22,6 @@ function getComputerChoice() {
 }
 // Test the function
 console.log(getComputerChoice());
-
-function getHumanChoice() {
-    let choice = prompt("Enter rock, paper, or scissors:");
-    choice = choice.toLowerCase();
-    return choice;
-}
-//test
-console.log(getHumanChoice());
-
-let humanScore = 0;
-let computerScore = 0;
 
 function determineWinner(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
