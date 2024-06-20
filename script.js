@@ -1,3 +1,34 @@
+/*
+
+1. rock paper scissors
+
+2. Function getHumanChoice:
+   a. Prompt user to input "rock", "paper", or "scissors".
+   b. Convert input to lowercase.
+   c. Return the choice.
+
+3. Function getComputerChoice:
+   a. Generate a random choice of "rock", "paper", or "scissors".
+   b. Return the choice.
+
+4. Initialize humanScore and computerScore to 0.
+
+5. Function playRound:
+   a. Get humanChoice using getHumanChoice.
+   b. Get computerChoice using getComputerChoice.
+   c. Compare choices to determine winner.
+   d. Increment the score of the winner.
+   e. Return result of the round.
+
+6. Function playGame:
+   a. Play 5 rounds:
+      i. Play a round using playRound.
+   b. Determine winner based on scores.
+   c. Print final scores and winner.
+
+7. Call playGame to start the game.
+*/
+
 function getComputerChoice() {
     const choices = ["rock", "paper", "scissors"];
     const randomIndex = Math.floor(Math.random() * choices.length);
