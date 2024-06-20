@@ -63,19 +63,20 @@ function determineWinner(humanChoice, computerChoice) {
 }
 
 function playRound(humanChoice, computerChoice) {
-    humanChoice = humanChoice.toLowerCase();
-    if (humanChoice === computerChoice) {
-        return "It's a tie!";
-    } else if (
-        (humanChoice === "rock" && computerChoice === "scissors") ||
-        (humanChoice === "paper" && computerChoice === "rock") ||
-        (humanChoice === "scissors" && computerChoice === "paper")
-    ) {
+    const result = determineWinner(humanChoice, computerChoice);
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.textContent = `You chose ${humanChoice}. Computer chose ${computerChoice}. ${result}`;
+
+    updateScore(result);
+    updateScoreDisplay();
+}
+
+// Function to update the score
+function updateScore(result) {
+    if (result === "You win!") {
         humanScore++;
-        return `You win! ${humanChoice} beats ${computerChoice}`;
-    } else {
+    } else if (result === "You lose!") {
         computerScore++;
-        return `You lose! ${computerChoice} beats ${humanChoice}`;
     }
 }
 // Test the function
